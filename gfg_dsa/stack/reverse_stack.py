@@ -12,6 +12,7 @@ def reverse_stack(st):
   while len(new_st)>0:
    st.append(new_st.pop())
   i+=1
+  #hellow world
  return st
 
 if __name__ == '__main__' :
