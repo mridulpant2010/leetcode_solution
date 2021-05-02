@@ -2,7 +2,6 @@
 import timeit
 
 def fibo(n,d):
-    
     if n<2:
         return n
     if n in d:
@@ -11,11 +10,10 @@ def fibo(n,d):
     result= fibo(n-1,d)+fibo(n-2,d)
     return result
 
-def fibo1(n):
-    
+
+def fibo1(n):    
     if n<2:
-        return n
-    
+        return n    
     return fibo1(n-1)+fibo1(n-2)
     
 

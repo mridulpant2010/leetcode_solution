@@ -1,0 +1,44 @@
+#how to do incremental load in sqoop?
+
+
+#how to do full load in sqoop?
+
+
+
+● Why HDFS or Why not existing file systems?
+● HDFS - NameNode & DataNodes
+● Quiz
+● Advance HDFS Concepts (HA, Federation)
+● Quiz
+● Hands-on with HDFS (Upload, Download, SetRep)
+● Quiz & Assessment
+● Data Locality (Rack Awareness)
+
+
+sqoop command:
+
+1- sqoop-import
+2- sqoop-import-all-tables
+3- sqoop-import-mainframe
+4- sqoop-export
+5- validation
+6- sqoop-job
+7- sqoop-metastore
+8- sqoop-merge
+9- sqoop-codegen
+10- sqoop-create-hive-table 
+11- sqoop-eval
+12- sqoop-list-database
+13- sqoop-list-tables
+14- sqoop-HCatalog Integration
+
+sqoop import --connect "connection_url" --username uname --pasword-file /path/to/file.password --table tableName -target-dir /path/to/dir
+sqoop import --query 'Select from query_name where $conditions' --split-by column_name --target-dir /path/to/dir
+
+'''
+hive and sqoop interview questions and practice
+'''
+for i in a:
+  if i%2==0:
+   continue
+   print(i)
