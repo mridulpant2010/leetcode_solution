@@ -27,7 +27,7 @@ def buildTree(ip) -> None:
     if data == 'true':
         data=next(ip)
         
-    elif data=='false':
+    elif data=='-1':#'false':
         return None
 
     root= Node(data)
