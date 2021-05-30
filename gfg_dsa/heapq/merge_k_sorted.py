@@ -18,18 +18,18 @@ def merge(arr):
     return output
 
 def prepare_arr(ar):
-	b=[]
-	a=[]
-	c=0
-	while c<len(ar):
-		d=0
-		a=[]
-		while d<k:
-			a.append(ar[c+d])
-			d+=1
-		b.append(a)
-		c+=k
-	return b
+    b=[]
+    a=[]
+    c=0
+    while c<len(ar):
+        d=0
+        a=[]
+        while d<k:
+            a.append(ar[c+d])
+            d+=1
+        b.append(a)
+        c+=k
+    return b
 
 if __name__=='__main__':
     k,n=list(map(int,input().split()))

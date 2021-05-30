@@ -17,7 +17,7 @@ def find_paths(root, sum):
       return 
   
   if root.left is None and root.right is None and root.val==sum:
-      
+      pass
   if root is not None:
       find_paths(root.left, sum-root.val)
       find_paths(root.right, sum-root.val)
