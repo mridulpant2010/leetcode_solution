@@ -1,4 +1,6 @@
 from machinecoding.service.serviceImpl.cache import CacheBuilding
+import sys
+
 
 if __name__ == '__main__':
     c =  CacheBuilding()
