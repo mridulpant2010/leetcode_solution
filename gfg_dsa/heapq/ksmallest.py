@@ -1,5 +1,5 @@
 import heapq
-#heapq by default prepares the max-heap
+#heapq by default prepares the min-heap
 #k-smallest --> prepare a max-heap
 #k-largest --> prepare a min-heap
 def ksmallest(arr,k):
