@@ -7,18 +7,22 @@ def insert(intervals, newInterval):
     :rtype: List[List[int]]
     """
     mergedInterval = []
-    #previous adding to the mergedInterval
+    if len(intervals)==0:
+        return [newInterval]
+    #previous elements adding to the mergedInterval
     i=0
-    for i in range(len(intervals)):
-        if newInterval[0]<=intervals[i][1]:
-            break
-        else:
-            mergedInterval.append(intervals[i])
+    # for i in range(len(intervals)):
+    #     if newInterval[0]<=intervals[i][1]:
+    #         break
+    #     else:
+    #         mergedInterval.append(intervals[i])
+    while i < len(intervals) and newInterval[0]>intervals[i][1]:
+        mergedInterval.append(intervals[i])
+        i+=1
     #merge process and checking the overlapping condition
     while i < len(intervals) and newInterval[1]>= intervals[i][0]:
         newInterval[0] = min(newInterval[0],intervals[i][0])
         newInterval[1] = max(newInterval[1],intervals[i][1])
-        print(newInterval)
         i+=1
     mergedInterval.append(newInterval)
     while i < len(intervals):
