@@ -14,6 +14,5 @@ def gas_stations(gas,cost):
             current_gas=0
     return start_index
 
-if __name__ == "__main__":
-    gas = [1,
+
         
