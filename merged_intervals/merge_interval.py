@@ -15,9 +15,8 @@ class Solution(object):
             curr_el = Pair(arr[i][0],arr[i][1])
             if curr_el.start<=prev_el.end:
                 prev_el.end=max(prev_el.end,curr_el.end)
-            else:
                 mergedInterval.append([prev_el.start,prev_el.end])
                 prev_el.start=curr_el.start
                 prev_el.end=curr_el.end
         mergedInterval.append([prev_el.start,prev_el.end])
-        return mergedInterval   
+        return max_cpu_load
