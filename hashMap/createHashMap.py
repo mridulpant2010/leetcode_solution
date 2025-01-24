@@ -28,7 +28,7 @@ class HashMap:
 
         self.hash_table[index].append((key,value))
         # what will be the difference between the self.hash_table.append() and the bucket.append() function
-                
+        # what collision resolution strategy is used here.
         
     
     def get(self,key):
