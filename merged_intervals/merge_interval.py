@@ -19,4 +19,4 @@ class Solution(object):
                 prev_el.start=curr_el.start
                 prev_el.end=curr_el.end
         mergedInterval.append([prev_el.start,prev_el.end])
-        return max_cpu_load
+        return mergedInterval
