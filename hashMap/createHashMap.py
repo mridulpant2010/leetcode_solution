@@ -28,10 +28,10 @@ class HashMap:
             if node.key==key:
                 node.value = value
                 return
-            else:
+            if node.next is None:
                 node.next= Node(key,value)
+                return
             node = node.next
-        return
                
     
     def get(self,key):

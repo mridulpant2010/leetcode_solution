@@ -1,3 +1,15 @@
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+        i = len(nums)-2
+        goal = i+1
+        while i>=0:
+            if nums[i]+i >= goal:
+                goal=i
+            i-=1
+        return goal==0
+
+
+
 #https://leetcode.com/problems/jump-game/?envType=study-plan-v2&envId=top-interview-150
 def canJump(arr):
     """
