@@ -20,3 +20,20 @@ class Solution(object):
                 prev_el.end=curr_el.end
         mergedInterval.append([prev_el.start,prev_el.end])
         return mergedInterval
+    
+
+import heapq
+class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        he=[]
+        for el in intervals:
+            heapq.heappush(he,[el[0],el[1]])
+        
+        mergedInterval=[]
+        while len(he)>0:
+            first_element = heapq.heappop(he)
+            if mergedInterval and mergedInterval[-1][1]>= first_element[0]:
+                mergedInterval[-1][1] = max(mergedInterval[-1][1],first_element[1])
+            else:
+                mergedInterval.append(first_element)
+        return mergedInterval
