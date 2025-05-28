@@ -29,10 +29,37 @@ def search(pat, txt):
             end+=1
     return ans
  
+ 
+def anagram_occurrences(txt,pat):
+    d=defaultdict(int)
+    pattern_d=defaultdict(int)
+    count=0
+    end=0;start=0; k = len(pat)
+    for c in pat:
+        pattern_d[c]+=1
+    print(pattern_d)
+    while end<len(txt):
+        d[txt[end]]+=1
+        print(end,d)
+        if end-start+1==k:
+            if d==pattern_d:
+                print(d)
+                count+=1
+            d[txt[start]]-=1
+            if d[txt[start]]==0:
+                del d[txt[start]]
+            start+=1
+        end+=1
+    return count
+    
+    
+ 
 if __name__=="__main__":
-    txt = "forxxorfxdofr"
-    pat = "for"
-    # txt = "aabaabaa"
-    # pat = "aaba"
+    # txt = "forxxorfxdofr"
+    # pat = "for"
+    txt = "aabaabaa"
+    pat = "aaba"
     ans=search(pat,txt)
+    ans2 = anagram_occurrences(txt,pat)
     print(ans)
+    print(ans2)

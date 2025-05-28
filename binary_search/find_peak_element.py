@@ -1,0 +1,2 @@
+# Implement a function to calculate the square root of any given number up to 2 points precision.
+Inputs are one string "pineapplepenapple" and other is string list which has ["apple","pen","applepen","pine","pineapple"]. Print how many string combinations you can use from list to create the original string.
