@@ -29,5 +29,39 @@ class Solution(object):
                 q2.append(currNode2.right)
         return True
 
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+from collections import deque
+class Solution:
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        first=deque()
+        second =deque()
+        first.append(p)
+        second.append(q)
+        res1=[]
+        res2=[]
+        while first:
+            curr = first.popleft()
+            if curr:
+                res1.append(curr.val)
+                first.append(curr.left)
+                first.append(curr.right)
+            else:
+                res1.append(None)
         
+        while second:
+            curr = second.popleft()
+            if curr:
+                res2.append(curr.val)
+                second.append(curr.left)
+                second.append(curr.right)
+            else:
+                res2.append(None)
+            
+        return res1==res2
         

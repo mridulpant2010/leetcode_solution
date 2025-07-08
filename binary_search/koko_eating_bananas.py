@@ -23,3 +23,28 @@ class Solution:
             else:
                 start=mid+1
         return start
+
+
+import math
+class Solution:
+    def get_piles_hrs(self,piles,k):
+        total_hrs=0
+        for i in range(len(piles)):
+            total_hrs += math.ceil(piles[i]/k)
+        return total_hrs
+    
+    def minEatingSpeed(self, piles: List[int], h: int) -> int:
+        
+        piles_sum  = sum(piles)
+        start=1
+        end = piles_sum
+        while start<=end:
+            mid=(start+end)//2
+            total_hrs= self.get_piles_hrs(piles,mid)
+            if total_hrs>h:
+                start=mid+1
+            else:
+                end=mid-1
+        return start
+
+        

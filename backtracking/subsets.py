@@ -22,4 +22,3 @@ if __name__ == "__main__":
     sol = Solution()
     ans=sol.subsets(nums)
     print(ans)
-    
